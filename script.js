@@ -1,9 +1,6 @@
-let bar = document.getElementById("bar");
-let nav = document.getElementById("nav");
+const mobileMenu = document.getElementById("mobile");
+const nav = document.getElementById("nav");
 
-if (bar) {
-    bar.onclick = function () {
-        nav.classList.toggle("active");
-    };
-}
-
+mobileMenu.addEventListener("click", () => {
+    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+});
