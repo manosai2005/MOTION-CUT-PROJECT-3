@@ -633,26 +633,66 @@
         padding: 10px;
         font-size: 13px;
     }   
- /* Default styles are for large screens (already defined in your CSS) */
+ 
+/* Media Query */
 
-/* For Extra Large Screens (Desktops & Laptops) */
-@media (min-width: 1440px) {
-    body {
-        max-width: 1440px;
-        margin: auto;
+@media (max-width: 799px) {
+    .section-p1 {
+        padding: 40px 40px;
+    } 
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #E3E6F3;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
     }
-}
 
-/* For Tablets (768px - 1024px) */
-@media (max-width: 1024px) {
-    #header {
-        padding: 20px 40px;
+    #navbar.active {
+        right: 0px;
+    }
+
+    #navbar li {
+        margin-bottom: 25px;
+    }
+
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    #mobile i {
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    #close {
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+    }
+
+    #lg-bag {
+        display: none;
     }
 
     #hero {
-        padding: 0 40px;
-        min-height: 60vh;
-        background-position: top 20% right 0;
+        height: 70vh;
+        padding: 0 80px;
+        background-position: top 30% right 30%;
     }
 
     #feature {
@@ -660,7 +700,7 @@
     }
 
     #feature .fe-box {
-        width: 40%;
+        margin: 15px 15px;
     }
 
     #product1 .pro-container {
@@ -668,7 +708,16 @@
     }
 
     #product1 .pro {
-        width: 45%;
+        margin: 15px;
+    }
+
+    #banner {
+        height: 20vh;
+    }
+
+    #sm-banner .banner-box {
+        min-height: 100%;
+        height: 30vh;
     }
 
     #banner3 {
@@ -676,107 +725,170 @@
     }
 
     #banner3 .banner-box {
-        min-width: 45%;
-        height: 25vh;
+        width: 28%;
     }
+
+    #newsletter .form {
+        width: 70%;
+    }
+
+    /* Contact Page */
 
     #form-details {
         padding: 40px;
     }
 
-    #sm-banner .banner-box {
-        min-width: 100%;
-        height: 40vh;
+    #form-details form {
+        width: 50%;
     }
 }
 
-/* For Mobile Screens (0px - 767px) */
-@media (max-width: 767px) {
+@media (max-width: 477px) {
+    .section-p1 {
+        padding: 20px;
+    }
+
     #header {
-        padding: 15px 20px;
+        padding: 10px 30px;
     }
 
-    #nav {
-        display: none;
+    h1 {
+        font-size: 38px;
     }
 
-    #mobile {
-        display: flex;
-        cursor: pointer;
+    h2 {
+        font-size: 32px;
     }
 
     #hero {
         padding: 0 20px;
-        min-height: 50vh;
-        background-position: center;
-    }
-
-    #hero h1 {
-        font-size: 30px;
-    }
-
-    #hero h2 {
-        font-size: 26px;
-    }
-
-    #hero button {
-        padding: 10px 30px;
-        font-size: 14px;
+        background-position: 55%;
     }
 
     #feature {
-        flex-direction: column;
-        align-items: center;
+        justify-content: space-between;
     }
 
     #feature .fe-box {
-        width: 90%;
+        width: 155px;
+        margin: 0 0 15px 0;
     }
 
-    #product1 .pro {
+    #product .pro {
         width: 100%;
     }
-
+    
     #banner {
-        height: 30vh;
-        padding: 10px;
-    }
-
-    #banner h2 {
-        font-size: 20px;
-    }
-
-    #sm-banner {
-        padding-left: 20px;
+        height: 40vh;
     }
 
     #sm-banner .banner-box {
-        min-width: 100%;
-        height: 35vh;
+        height: 40vh;
+        margin-bottom: 20px;
     }
 
     #banner3 {
         padding: 0 20px;
-        flex-direction: column;
     }
 
     #banner3 .banner-box {
-        min-width: 100%;
-        height: 20vh;
+        width: 100%;
     }
+
+    #newsletter {
+        padding: 40px 20px;
+    }
+
+    #newsletter .form {
+        width: 100%;
+    }
+
+    footer .copyright {
+        text-align: start;
+    }
+
+    /* Single Product */
+    #productdetails {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #productdetails .single-pro-image {
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    #productdetails .single-pro-details {
+        width: 100%;
+    }
+
+    /* Blog Page */
+    #blog {
+        padding: 100px 20px 0 20px;
+    }
+
+    #blog .blog-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #blog .blog-img {
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 30px;
+    }
+
+    #blog .blog-details {
+        width: 100%;
+    }
+
+    /* About Page */
+    
+    #about-head {
+        flex-direction: column;
+    }
+
+    #about-head img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #about-head div {
+        padding-left: 0px;
+    }
+
+    #about-app .video {
+        width: 100%;
+    }
+
+    /* Contact Page */
 
     #contact-details {
         flex-direction: column;
     }
 
-    #contact-details .details,
-    #form-details form {
+    #contact-details .details {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #contact-details .map {
         width: 100%;
     }
 
     #form-details {
-        padding: 20px;
+        margin: 10px;
+        padding: 30px 10px;
+        flex-wrap: wrap;
     }
+
+    #form-details form {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    /* Cart Page */
 
     #cart-add {
         flex-direction: column;
@@ -784,5 +896,10 @@
 
     #cart-add .coupon {
         width: 100%;
+    }
+
+    #cart-add .subtotal {
+        width: 100%;
+        padding: 20px;
     }
 }
